@@ -81,10 +81,10 @@ def merge_train_structures(train, structures):
   merged = pd.merge(train, structures, on=['molecule_name', 'atom_index_0'])
   
   structures = structures.rename({'atom_index_0': 'atom_index_1',
-                                  'x':'x_1', 'y':'y_1', 'z':'z_1',
+                                  'x_0':'x_1', 'y_0':'y_1', 'z_0':'z_1',
                                   'atom_0':'atom_1'}, axis=1)
   
-  merged = pd.merge(train, structures, on=['molecule_name', 'atom_index_1'])
+  merged_1 = pd.merge(merged, structures, on=['molecule_name', 'atom_index_1'])
   
   structures = structures.rename({'atom_index_1': 'atom_index',
                                   'x_1':'x', 'y_1':'y', 'z_1':'z',
@@ -92,4 +92,4 @@ def merge_train_structures(train, structures):
   
   assert train.shape[0] == merged.shape[0]
   
-  return merged
+  return merged_1

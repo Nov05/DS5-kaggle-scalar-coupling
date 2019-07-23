@@ -57,3 +57,39 @@ def show_ram_usage():
 	py = psutil.Process(os.getpid())
 	print('RAM usage: {} GB'.format(py.memory_info()[0]/2. ** 30))
 	pass
+
+
+def merge_train_structures(train, structures):
+  
+  """This function is used to merge the structures dataset to the 
+     original train dataset
+     
+     Parameters:
+     ===========
+	   train: train dataframe
+	   structures: structures dataframe.
+     
+     Output:
+	   ===========
+	   dataframe: merged dataframe
+     """
+  
+  structures = structures.rename({'atom_index': 'atom_index_0',
+                                  'x':'x_0', 'y':'y_0', 'z':'z_0',
+                                  'atom':'atom_0'}, axis=1)
+  
+  merged = pd.merge(train, structures, on=['molecule_name', 'atom_index_0'])
+  
+  structures = structures.rename({'atom_index_0': 'atom_index_1',
+                                  'x':'x_1', 'y':'y_1', 'z':'z_1',
+                                  'atom_0':'atom_1'}, axis=1)
+  
+  merged = pd.merge(train, structures, on=['molecule_name', 'atom_index_1'])
+  
+  structures = structures.rename({'atom_index_1': 'atom_index',
+                                  'x_1':'x', 'y_1':'y', 'z_1':'z',
+                                  'atom_1':'atom'}, axis=1)
+  
+  assert train.shape[0] == merged.shape[0]
+  
+  return merged

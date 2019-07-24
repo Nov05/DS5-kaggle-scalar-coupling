@@ -1,3 +1,4 @@
 *.csv
 *.xyz
 notebooks/.ipynb_checkpoints
+submissions/*.csv

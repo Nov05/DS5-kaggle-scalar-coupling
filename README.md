@@ -1,8 +1,10 @@
 # DS5-kaggle-scalar-coupling
 
+## Logs
 2019-07-22 repo created
 
-All Notebooks
+## Notes 
+All Notebooks  
 https://github.com/elizabethts/DS5-kaggle-scalar-coupling/tree/master/notebooks 
 
 Notebook - Download data from Kaggle to Google Drive  

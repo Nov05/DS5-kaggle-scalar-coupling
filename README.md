@@ -9,8 +9,6 @@ CHAMPS (CHemistry And Mathematics in Phase Space)   2,166 teams
 
 <img src="https://github.com/Nov05/DS5-kaggle-scalar-coupling/blob/master/images/ezgif.com-optimize.gif">      
 
-<br>
-
 ## :point_right: Logs
 2019-07-22 repo created
 

@@ -5,7 +5,7 @@
 
 ## Notes 
 All Notebooks  
-https://github.com/elizabethts/DS5-kaggle-scalar-coupling/tree/master/notebooks 
+https://github.com/Nov05/DS5-kaggle-scalar-coupling/tree/master/notebooks
 
 Notebook - Download data from Kaggle to Google Drive  
 https://colab.research.google.com/drive/1LcOJkAxenvuk7s4ScYWhoolEe6QS87PU  

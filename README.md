@@ -2,7 +2,7 @@
 
 <br>
 
-## :point_right: Kaggle: Predicting Molecular Properties
+## :point_right: Kaggle - Predicting Molecular Properties
 https://www.kaggle.com/c/champs-scalar-coupling  
 Can you measure the magnetic interactions between a pair of atoms?  
 CHAMPS (CHemistry And Mathematics in Phase Space)   2,166 teams 
